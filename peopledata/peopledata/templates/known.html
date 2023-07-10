@@ -1,0 +1,98 @@
+{% load static %}
+
+<head>
+    <title>Display Known Images</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-image: linear-gradient(to right, rgb(12, 12, 12), rgb(32, 32, 32), rgb(46, 46, 46), rgb(78, 78, 78));
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .neon {
+        width: 100%;
+        padding-top: 50px;
+        margin: auto;
+        transform: translate (-50%, -50%);
+        margin: 0;
+        font-size: 4rem;
+        color: #fff;
+        text-shadow: 0 0 20px #ff005b;
+        text-align: center;
+    }
+
+    .imgcontainer {
+        border: 2px black double;
+        background-color: #fff;
+        margin-top: 3rem !important;
+        max-width: 85%;
+        margin: auto;
+        padding: 1rem 3rem 3rem 1rem;
+        height: 300px;
+        overflow-y: auto;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .imginner {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        background-color: #fc387d;
+        color: white;
+        padding: 12px;
+        border-radius: 5px;
+        text-decoration: none;
+    }
+    .btn:hover {
+        background-color: rgb(78, 76, 76);
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+   
+</style>
+
+<body>
+    <div class="container">
+
+        <h1 class="neon">KNOWN IMAGES </h1>
+        <div class="buttons">
+            <a href="http://127.0.0.1:8000/admin/" class="btn">ADMIN PANEL</a>
+            <a href="http://127.0.0.1:8000/admin/peopledata/known/" class="btn">UPLOAD TO KNOWN</a>
+            <a href="http://127.0.0.1:8000/unknownimg/" class="btn">UNKNOWN IMAGES</a>
+            <a href="http://127.0.0.1:8000/criminalimg/" class="btn">CRIMINAL IMAGES</a>
+        </div>
+        <div class="imgcontainer">
+            <div class="imginner">
+                {% for image in images %}
+
+                <img src="../../media/knownimg/{{image}}" alt="alttext" width="120">
+
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+    </div>
+</body>

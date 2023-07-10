@@ -1,0 +1,300 @@
+{% load static %}
+
+<head>
+  <title>Main Page</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .neon {
+    /* position: absolute; */
+    width: 100%;
+    padding-top: 50px;
+    margin: auto;
+    transform: translate (-50%, -50%);
+    margin: 0;
+    /* padding: 0 20px; */
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 0 0 20px #ff005b;
+    text-align: center;
+  }
+
+  .animation-area {
+    /* background: linear-gradient(to left, #8942a8, #ba382f); */
+    background-image: linear-gradient(to right, rgb(12, 12, 12), rgb(32, 32, 32), rgb(46, 46, 46), rgb(78, 78, 78));
+    background-size: cover;
+    /* z-index: 0; */
+    width: 100%;
+    height: 100vh;
+  }
+
+  .box-area {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom: -150px;
+  }
+
+  .box-area li:nth-child(1) {
+    left: 86%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 3s;
+  }
+
+  .box-area li:nth-child(2) {
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1s;
+    animation-duration: 10s;
+  }
+
+  .box-area li:nth-child(3) {
+    left: 70%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 4s;
+  }
+
+  .box-area li:nth-child(4) {
+    left: 42%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 2s;
+    animation-duration: 15s;
+  }
+
+  .box-area li:nth-child(5) {
+    left: 45%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+  }
+
+  .box-area li:nth-child(6) {
+    left: 15%;
+    width: 65px;
+    height: 65px;
+    animation-delay: 2s;
+  }
+
+  .box-area li:nth-child(7) {
+    left: 56%;
+    width: 45px;
+    height: 45px;
+    animation-delay: 0.3s;
+  }
+
+  .box-area li:nth-child(8) {
+    left: 72%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 3s;
+    animation-duration: 10s;
+  }
+
+  .box-area li:nth-child(9) {
+    left: 4%;
+    width: 33px;
+    height: 33px;
+    animation-delay: 4s;
+  }
+
+  .box-area li:nth-child(10) {
+    left: 10%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 1.7s;
+    animation-duration: 15s;
+  }
+
+  .box-area li:nth-child(11) {
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 2.5s;
+  }
+
+  .box-area li:nth-child(12) {
+    left: 33%;
+    width: 82px;
+    height: 82px;
+    animation-delay: 0;
+    animation-duration: 15s;
+
+  }
+
+  .box-area li:nth-child(13) {
+    left: 20%;
+    width: 17px;
+    height: 17px;
+    animation-delay: 0;
+  }
+
+  .box-area li:nth-child(14) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0;
+    animation-duration: 15s;
+
+  }
+
+  .box-area li:nth-child(15) {
+    left: 73%;
+    width: 26px;
+    height: 26px;
+    animation-delay: 1s;
+  }
+
+  .box-area li:nth-child(16) {
+    left: 82%;
+    width: 51px;
+    height: 51px;
+    animation-delay: 1.2s;
+    animation-duration: 10s;
+
+  }
+
+  .box-area li:nth-child(17) {
+    left: 90%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+
+  }
+
+  .box-area li:nth-child(18) {
+    left: 95%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translateY(0) rotate(360deg);
+      opacity: 1;
+    }
+
+    50% {
+      transform: translateY(-360px) rotate(0deg);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(-800px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .admin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    padding-top: 150px;
+    z-index: 2;
+  }
+
+  .btn {
+    background-color: #fc387d;
+    color: white;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 1rem;
+  }
+
+  .btn:hover {
+    background-color: rgb(78, 76, 76);
+  }
+
+  
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.5rem;
+  }
+  .msg{
+    margin-top: 4rem;
+    z-index: 3;
+    text-align: center;
+    color: azure;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+</style>
+
+<body>
+  <div class="animation-area">
+    <div class="container">
+      <h1 class="neon" data-text="HOME SECURITY SYSTEM">HOME SECURITY SYSTEM</h1>
+      <div class="admin">
+
+        <div class="buttons">
+          <a href="http://127.0.0.1:8000/admin/" target="_blank" class="btn ">Admin Panel</a>
+          <a href="http://127.0.0.1:8000/knownimg/" target="_blank" class="btn">Known Images</a>
+          <a href="http://127.0.0.1:8000/unknownimg/" target="_blank" class="btn">Unknown Images</a>
+          <a href="http://127.0.0.1:8000/criminalimg/" target="_blank" class="btn">Criminal Images</a>
+        </div>
+      </div>
+      <p class="msg"> Note: Images can only be viewed from Homepage if admin is logged in</p>
+    </div>
+
+
+    <ul class="box-area">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+
+  </div>
+</body>
